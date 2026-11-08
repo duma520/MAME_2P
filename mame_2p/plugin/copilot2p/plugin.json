@@ -1,0 +1,10 @@
+{
+  "plugin": {
+    "name": "copilot2p",
+    "description": "多玩家输入镜像（纯镜像，连发已移除）：源玩家按键同步到 2P/3P/4P，按 ROM 独立配置",
+    "version": "5.0.1",
+    "author": "local",
+    "type": "plugin",
+    "start": "false"
+  }
+}
