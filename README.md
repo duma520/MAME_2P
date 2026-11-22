@@ -22,7 +22,7 @@
 **文档版本**：对应软件 `mame_2p v1.4.0` + `copilot2p 插件 v5.0.1`
 **开发/整理时间**：2026-11-08
 
-> **版权声明**：本文档内容未经书面许可不得转载或用于商业用途。
+> **版权声明**：本文档内容随本仓库以 AGPL-3.0 发布，可自由转载与商用。
 > **技术支持说明**：本项目不提供私人邮箱支持，所有技术支持均通过 GitHub Issues 等公开渠道进行，以便其他用户也能检索受益。
 
 ---
@@ -2352,31 +2352,9 @@ Esc       = 退出菜单
 
 ### 开源许可证
 
-本项目采用 **MIT 许可证**。
+本项目采用 **AGPL-3.0 许可证**。
 
-```
-MIT License
-
-Copyright (c) 永久 杜玛
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+完整许可证条文见仓库根目录 [LICENSE](LICENSE)（GNU AGPL-3.0）。
 
 ### 使用边界（重要）
 
@@ -2390,13 +2368,13 @@ SOFTWARE.
 
 - ❌ 在线多人游戏作弊
 - ❌ 绕过反作弊系统
-- ❌ 商业用途（未经书面许可）
+- ✅ 商业用途（AGPL-3.0 允许，无需另行许可）
 - ❌ 侵犯 DRM
 
 ### 版权声明
 
 © 永久 杜玛 保留所有权利。
-本文档内容未经书面许可不得转载或用于商业用途。
+本文档内容随本仓库以 AGPL-3.0 发布，可自由转载与商用。
 
 ### 技术支持
 
