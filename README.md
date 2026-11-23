@@ -536,7 +536,7 @@ MAMEUI 前端进程（启动一次，常驻）
 在本项目实测环境中：
 
 ```
-\\Ds1821\hd\ROM 街机\MAMEUI64 Plus!\mameui\copilot2p\
+\\NAS\hd\ROM 街机\MAMEUI64 Plus!\mameui\copilot2p\
 ```
 
 > ⚠️ **坑点（v4.8.1 修复）**：早期版本**不创建这个目录**，导致所有 `io.open(..., 'w')` 静默失败——状态文件不生成、配置保存不生效。v4.8.1 起，插件启动时会主动 `mkdir` 并用"写入探针"验证目录可写。如果目录不可写，错误会写进 `last_error` 并打印到 MAME 日志。
@@ -556,7 +556,7 @@ MAMEUI 前端进程（启动一次，常驻）
 
 ```bash
 # 进入项目目录
-cd G:\Python_Code\mame_2p
+cd 你的项目目录\mame_2p
 
 # 安装插件
 python -m mame_2p install
@@ -961,7 +961,7 @@ P2 → P3 → P4 → P2+P3 → P2+P4 → P3+P4 → P2+P3+P4 → （循环）
 典型路径：
 
 ```
-\\Ds1821\hd\ROM 街机\MAMEUI64 Plus!\mameui\copilot2p\
+\\NAS\hd\ROM 街机\MAMEUI64 Plus!\mameui\copilot2p\
 ```
 
 文件清单：
@@ -1260,7 +1260,7 @@ r = r:gsub('[/\\:*?"<>|]', '_')
 import json
 import os
 
-CONFIG_DIR = r"\\Ds1821\hd\ROM 街机\MAMEUI64 Plus!\mameui\copilot2p"
+CONFIG_DIR = r"\\NAS\hd\ROM 街机\MAMEUI64 Plus!\mameui\copilot2p"
 
 def make_config(rom, targets):
     """
@@ -1647,7 +1647,7 @@ luac -p init.lua
 
 ```bash
 # 1. 改 G 盘源码
-#    G:\Python_Code\mame_2p\plugins\copilot2p\init.lua
+#    你的项目目录\mame_2p\plugins\copilot2p\init.lua
 
 # 2. 词法检查
 python -m mame_2p check_lua plugins/copilot2p/init.lua
@@ -1922,7 +1922,7 @@ grep -c "local last_actions" init.lua
 | v1.0.0 | 2026-11-06 | 首次交付，方案一：外部按键守护（Python SendInput） |
 | v1.1.0 | 2026-11-06 | 新增方案二：MAME 官方 Lua 插件 copilot2p，真跟随 1P |
 | v1.2.0 | 2026-11-06 | 修复视觉通道（CPU 不支持 SSE4.2 导致 numpy 崩），插件首次跑通但 `pairs=0` |
-| v1.3.0 | 2026-11-06 | 项目迁移到 `G:\Python_Code`，修复可移植性 |
+| v1.3.0 | 2026-11-06 | 项目迁移到独立目录，修复可移植性 |
 | **v1.4.0** | 2026-11-07 | **移除方案一（SendInput 对 MAME 无效），项目聚焦插件** |
 
 #### 插件主线（copilot2p）
@@ -1983,7 +1983,7 @@ grep -c "local last_actions" init.lua
 ### 15.1 项目结构
 
 ```
-G:\Python_Code\mame_2p\
+你的项目目录\mame_2p\
     ├── mame_2p\                    ← Python 包
     │   ├── __init__.py             ← APP_VERSION
     │   ├── __main__.py             ← CLI 入口
@@ -2007,7 +2007,7 @@ G:\Python_Code\mame_2p\
 
 ```
 1. 改 G 盘源码
-   G:\Python_Code\mame_2p\plugins\copilot2p\init.lua
+   你的项目目录\mame_2p\plugins\copilot2p\init.lua
    ↓
 2. 词法检查
    python -m mame_2p check_lua plugins/copilot2p/init.lua
@@ -2339,9 +2339,9 @@ Esc       = 退出菜单
 **实测环境路径**：
 
 ```
-项目：G:\Python_Code\mame_2p
-部署：\\Ds1821\hd\ROM 街机\MAMEUI64 Plus!\mameui\plugins\copilot2p
-配置：\\Ds1821\hd\ROM 街机\MAMEUI64 Plus!\mameui\copilot2p
+项目：你的项目目录\mame_2p
+部署：\\NAS\hd\ROM 街机\MAMEUI64 Plus!\mameui\plugins\copilot2p
+配置：\\NAS\hd\ROM 街机\MAMEUI64 Plus!\mameui\copilot2p
 备份：version\20261107-v26\（v5.0.1）
 ```
 
